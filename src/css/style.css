@@ -1,0 +1,29 @@
+table, tr, td {
+  width: 600px;
+  border: 0px;
+  table-layout: fixed;
+}
+
+td.userinfo-column1 {
+  width: 125px;
+}
+
+td.userinfo-columnn {
+  width: 250px;
+}
+
+td.userinfo-left {
+  text-align: left;
+}
+
+td.userinfo-right {
+  text-align: right;
+}
+
+input.userinfo {
+  width: 235px;
+}
+
+.error {
+  color: #009900;
+}
