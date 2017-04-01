@@ -70,7 +70,7 @@
 
   <body>
 
-    <h1>Adding a New Resident</h1>
+    <h1>Add a New Resident</h1>
     <p>Please, fill the form below with the information about the new resident:</p>
     <p><span class="error"><?php echo $messageErr; ?></span></p>
     <p><span class="error">* required fields</span></p>
