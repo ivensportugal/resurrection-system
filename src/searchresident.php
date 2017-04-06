@@ -1,5 +1,5 @@
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-  <input type="radio" name="searchByName" value="searchByName">Search by name
+  <input type="radio" name="searchBy" value="searchByName" <?php if($searchBy == 'searchByName') echo 'checked'; ?>>Search by name
   <span class="error"><?php echo $searchByErr; ?></span>
   <br>
 
@@ -18,7 +18,7 @@
       </table>
 
 
-  <input type="radio" name="searchByRoom" value="searchByName">Search by room
+  <input type="radio" name="searchBy" value="searchByRoom" <?php if($searchBy == 'searchByRoom') echo 'checked'; ?>>Search by room
   <span class="error"><?php echo $searchByErr; ?></span>
   <br>
 

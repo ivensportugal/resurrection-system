@@ -15,10 +15,33 @@
 
     if($_POST['searchResident']) {
 
-      if($_POST['searchByName']){
-        echo 'Search By Name';
-      } elseif ($_POST['searchByRoom']) {
-        echo 'Search By Room';
+      if($_POST['searchBy'] == 'searchByName'){
+
+        $searchBy = 'searchByName';
+
+        $resultGivenName  = validateInput($_POST['givenName' ], 'Given name' );
+        $resultFamilyName = validateInput($_POST['familyName'], 'Family name');
+
+        if($resultGivenName[0]) {
+          $givenName = $resultGivenName[1];
+        }
+
+        if($resultFamilyName[0]) {
+          $familyName = $resultFamilyName[1];
+        }
+
+      } elseif ($_POST['searchBy'] == 'searchByRoom') {
+
+        $searchBy = 'searchByRoom';
+          
+        $resultRoom = validateInput($_POST['room'], 'Room');
+        
+        if($resultRoom[0]) {
+          $room = $resultRoom[1];
+          $givenName = $_POST['givenName'];
+        }
+
+
       } else {
         echo 'Select one';
         $searchByErr = 'Select one search criteria';
