@@ -15,6 +15,10 @@
 
     if($_POST['searchResident']) {
 
+      $givenName  = $_POST['givenName' ];
+      $familyName = $_POST['familyName'];
+      $room       = $_POST['room'      ];
+
       if($_POST['searchBy'] == 'searchByName'){
 
         $searchBy = 'searchByName';
@@ -29,6 +33,9 @@
         if($resultFamilyName[0]) {
           $familyName = $resultFamilyName[1];
         }
+
+
+        
 
       } elseif ($_POST['searchBy'] == 'searchByRoom') {
 
